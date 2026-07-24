@@ -316,6 +316,20 @@
 
           <p class="contact-line">
 
+            ${
+              data.profile.location
+                ? `
+                  <span>
+                    ${
+                      esc(
+                        data.profile.location
+                      )
+                    }
+                  </span>
+                `
+                : ""
+            }
+
             <span>
               ${
                 esc(
