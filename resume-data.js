@@ -1,109 +1,191 @@
 window.RESUME_DATA = {
   profile: {
-    name: "林镇伟",
-    phone: "156-2613-0517",
+    name: "Zhenwei Lin",
+    location: "Guangdong, China",
+    phone: "+86 156-2613-0517",
     email: "aweilinzhen@gmail.com",
-    targetRole: "求职方向：AI产品经理｜随时到岗",
+    targetRole: "AI Product Manager | Open to Singapore Opportunities",
     avatar: "assets/profile.png"
   },
 
   summary: [
-    "软件工程本科，人工智能硕士在读，具备 Java 开发背景及 6 年 B 端/PaaS 产品经验，拥有较强技术理解能力和复杂业务抽象能力，能够推动 AI 产品方案设计与落地。",
-    "具备机器学习、NLP、高级算法与数据挖掘等 AI 基础，研究方向聚焦自然语言驱动的业务流程自动化；同时拥有 Workflow、数据建模、API 编排及权限体系等复杂平台能力设计经验。",
-    "曾参与多款低代码/PaaS 平台核心引擎设计，主导宝洁、中消云等复杂大客户项目交付，具备复杂业务抽象、平台能力设计、技术方案协同与产品落地能力。"
+    "AI Product Manager with a software engineering background and 6 years of experience in B2B SaaS/PaaS product management. Experienced in translating complex business requirements into scalable product solutions and driving AI-powered product delivery.",
+
+    "Strong understanding of AI technologies including Machine Learning, Natural Language Processing (NLP), advanced algorithms, and data mining. Currently pursuing a Master’s degree in Artificial Intelligence, focusing on natural language-driven business process automation and LLM applications.",
+
+    "Experienced in enterprise platform design, workflow automation, data modeling, API integration, and permission systems. Previously contributed to low-code/PaaS platform development and delivered solutions for enterprise clients including P&G and Zhongxiaoyun."
   ],
 
+
   aiProject: {
-    name: "AI 驱动的业务流程自动化（Text-to-Workflow）",
-    period: "2025.03 - 至今",
-    subtitle: "面向企业业务人员无需编程构建自动化流程场景，设计基于LLM的自然语言流程生成能力。",
+    name: "AI-driven Business Process Automation (Text-to-Workflow)",
+    period: "2025.03 - Present",
+
+    subtitle:
+      "Designed an LLM-powered workflow automation solution that enables business users to generate executable workflows through natural language descriptions.",
+
     bullets: [
-      "负责 AI 自动化产品设计，将用户自然语言转换为业务流程，搭建「需求输入→LLM解析→Workflow生成→BPMN执行」链路。",
-      "设计 Workflow IR 中间层，定义任务节点、条件分支、流程关系等核心结构，支撑 LLM 输出结构化工作流并生成 BPMN。",
-      "优化 LLM 生成效果，通过 Prompt Engineering、结构化输出及规则校验，提高流程生成的准确性和稳定性。",
-      "设计 24 个企业业务流程测试案例，覆盖顺序、条件分支、并行等场景，完成流程生成、部署和执行验证，成功率 100%。"
+      "Designed the AI product architecture by building the pipeline of Natural Language Input → LLM Understanding → Workflow Generation → BPMN Execution, enabling automated business process creation.",
+
+      "Designed Workflow IR (Intermediate Representation) as a structured layer between LLM output and workflow execution, defining task nodes, conditional branches, and process relationships.",
+
+      "Improved LLM generation reliability through Prompt Engineering, structured output design, and rule-based validation to enhance accuracy, consistency, and controllability.",
+
+      "Created 24 enterprise workflow test scenarios covering sequential processes, conditional branches, and parallel execution. Achieved 100% success rate in workflow generation, deployment, and execution validation."
     ]
   },
 
+
   experience: [
+
     {
-      company: "有信云",
-      period: "2021.09 - 2025.01",
-      subtitle: "低代码/PaaS 平台解决方案服务商（纳斯达克上市公司，Nasdaq: YAAS），任 PaaS 产品经理。",
+      company: "Youxin Cloud (Nasdaq: YAAS)",
+
+      period:
+        "2021.09 - 2025.01",
+
+      subtitle:
+        "Enterprise PaaS and low-code platform provider | PaaS Product Manager.",
+
       bullets: [
-        "参与 PaaS 低代码平台从 0-1 建设，负责审批流、Workflow 等核心底座能力规划与设计，持续推动平台标准化、产品迭代及商业化落地；任职期间公司于纳斯达克上市，个人连续 2 次获评 S 级优秀绩效。",
-        "统筹复杂模块从需求分析、方案评审、技术对齐至研发交付的完整产品闭环，协调研发、测试与设计资源解决跨模块依赖及落地问题；同时带教 2 名助理产品经理完成需求分析、产品设计与项目推进。",
-        "负责 KA 客户复杂业务方案设计与技术可行性对齐，深度参与宝洁、中消云等大型客户交付，解决多业务线、复杂审批及系统集成等落地问题；疫情时期协同团队在 1 周内完成复工系统配置上线。"
+        "Participated in the 0-1 development of an enterprise low-code/PaaS platform, responsible for core platform capabilities including workflow, approval processes, and underlying product architecture. Supported continuous product iteration and commercialization.",
+
+        "Managed the complete product lifecycle from requirement analysis, solution design, technical alignment, development delivery, and cross-functional coordination. Mentored two assistant product managers in product analysis and project execution.",
+
+        "Designed enterprise solutions for key customers and collaborated with engineering teams on complex business scenarios, system integrations, and workflow automation requirements. Delivered solutions for enterprise clients including P&G and Zhongxiaoyun."
       ]
     },
+
+
     {
-      company: "豌豆思维",
-      period: "2021.03 - 2021.08",
-      subtitle: "在线教育 C 轮企业，任技术中台产品经理。",
+      company: "WonderMath (豌豆思维)",
+
+      period:
+        "2021.03 - 2021.08",
+
+      subtitle:
+        "Series C online education company | Technical Platform Product Manager.",
+
       bullets: [
-        "负责研发中心内部统一监控平台的具体产品设计。调研并抽象多业务线的监控指标，推动基础底座平台的快速落地与推广接入。",
-        "高效推进平台在各业务部门的落地并获得认可。充分发挥沟通推进能力，在 5 个月内协同研发、运维团队完成多业务线指标接入，监控覆盖率提升至约 90%，推动统一监控平台在各业务部门快速落地；个人获季度“突出贡献奖”及部门“优秀项目奖”。"
+        "Designed internal monitoring platform products for the engineering organization by analyzing monitoring requirements across multiple business lines and establishing unified platform capabilities.",
+
+        "Coordinated engineering and operations teams to integrate monitoring indicators across different departments within five months, improving monitoring coverage to approximately 90%."
       ]
     },
+
+
     {
-      company: "滴普科技",
-      period: "2019.08 - 2021.03",
-      subtitle: "数据智能与云原生科技服务商（港股上市公司，01384.HK），任云原生产品经理。",
+      company: "Deep Data (滴普科技)",
+
+      period:
+        "2019.08 - 2021.03",
+
+      subtitle:
+        "Cloud-native and data intelligence technology company (HKEX: 01384) | Cloud-native Product Manager.",
+
       bullets: [
-        "负责云原生及低代码平台相关模块的功能设计。参与前端可视化低代码、容器管理等工具的设计，配合团队完成产品验证与版本迭代，保障交付团队的日常构建效率。",
-        "负责产品技术方案的对齐与业务调整期的能力重构。发挥软件工程专业背景优势，与研发运维团队密切配合，并在业务调整期协助将容器与研发效能核心能力进行重塑和复用。"
+        "Designed cloud-native and low-code platform capabilities, including visual development tools and container management solutions, supporting product validation and iterative delivery.",
+
+        "Collaborated with engineering and operations teams to align technical solutions, optimize platform capabilities, and improve development efficiency through reusable components and platformization."
       ]
     },
+
+
     {
-      company: "道一云",
-      period: "2018.07 - 2019.08",
-      subtitle: "腾讯战略投资企业服务商，主营低代码与协同办公业务，任产品经理。",
+      company: "Daoyiyun",
+
+      period:
+        "2018.07 - 2019.08",
+
+      subtitle:
+        "Enterprise collaboration and low-code platform provider | Product Manager.",
+
       bullets: [
-        "负责七巧Plus（低代码平台）与 BPM 平台的部分核心功能设计。参与表单、流程等基础模块的逻辑规划，保障标杆项目的实施落地，个人数次获评季度优秀。",
-        "协助进行低代码核心技术方案的提炼与沉淀。参与低代码产品白皮书的撰写，并协助研发团队提炼技术方案，配合公司成功申请了 2 项低代码领域的国家发明专利。"
+        "Designed core capabilities for low-code and BPM platforms, including form builders, workflow engines, and configurable business modules to support enterprise application development.",
+
+        "Contributed to low-code technology documentation and solution refinement, supporting the team in applying for two national invention patents related to low-code technologies."
       ]
     }
+
   ],
+
 
   projects: [
-    {
-      name: "有信云 PaaS 低代码平台",
-      period: "2021.09 - 2025.01",
-      subtitle: "面向中大型企业的 PaaS 低代码平台，提供数据模型、Workflow、审批流、页面及 DSL 等核心引擎能力。",
-      bullets: [
-        "主导数据模型、页面引擎、Workflow、审批流及 API 编排等核心能力设计，围绕可配置、可扩展与跨模块复用进行平台抽象，降低复杂业务场景的定制开发成本。",
-        "主导大客户方案交付与跨系统集成。联合 Salesforce 金牌服务商蓝岭科技，攻克平台与 ERP/CRM 等系统的接口集成与数据互通瓶颈。"
-      ]
-    },
-    {
-      name: "道一云 七巧Plus低代码平台",
-      period: "2018.07 - 2019.08",
-      subtitle: "面向中小企业的 aPaaS 低代码平台，提供表单、工作流、报表、页面、低代码等引擎。",
-      bullets: [
-        "主导表单组件与复杂 BPMN 2.0 审批流引擎设计。抽象设计 20+ 基础与关系组件，落地满足复杂分支和百级审批节点的审批流，在商业化前支撑内部快速搭建并上架 10+ 行业应用。",
-        "负责多端配置页面引擎设计，成功推动产品商业化与技术沉淀。设计移动与 PC 分端配置的页面引擎（10+组件），推动公有云商业化（注册企业 8000+，现为公司战略级招牌产品）；提炼技术方案，协助申请 2 项低代码国家发明专利。"
-      ]
-    }    
-  ],
 
-  education: [
     {
-      school: "马来西亚国立大学",
-      degree: "人工智能硕士（在读）",
-      period: "2025.03 - 2026.11（预计）",
+      name:
+        "Youxin Cloud Enterprise PaaS Low-code Platform",
+
+      period:
+        "2021.09 - 2025.01",
+
+      subtitle:
+        "Enterprise PaaS platform providing data modeling, workflow automation, approval processes, page builders, API orchestration, and DSL capabilities.",
+
       bullets: [
-        "研究方向：专注于人工智能与自然语言驱动的业务流程自动化（Text-to-Workflow），研究如何将自然语言智能转换为结构化、可执行的自动化业务流程。",
-        "主修课程：机器学习、高级AI算法、自然语言处理（NLP）、数据挖掘等。",
+        "Designed core platform capabilities including data models, workflow engine, approval workflows, page builders, and API orchestration, improving platform scalability and reducing customized development costs.",
+
+        "Led enterprise solution delivery and cross-system integration projects, collaborating with Salesforce consulting partners to solve ERP/CRM integration and data synchronization challenges."
       ]
     },
+
+
     {
-      school: "广州软件学院",
-      degree: "软件工程 本科",
-      period: "2014.08 - 2018.06",
+      name:
+        "Daoyiyun QiqiaoPlus Low-code Platform",
+
+      period:
+        "2018.07 - 2019.08",
+
+      subtitle:
+        "Low-code application platform providing form builders, workflow engines, reports, and configurable business applications.",
+
       bullets: [
-        "奖项：优秀毕业生、优秀毕业生冠军奖、国家单项奖学金、广东省优秀共青团干部。",
-        "实践：发现杯软件设计大赛全国二等奖、计算机设计大赛全国三等奖、蓝桥杯全国选拔赛二等奖。"
+        "Designed form components and BPMN 2.0 workflow engine capabilities, supporting complex approval scenarios with multi-level branches and hundreds of workflow nodes.",
+
+        "Designed multi-platform page configuration capabilities with reusable components, contributing to commercial deployment and platform technology accumulation."
       ]
     }
+
+  ],
+
+
+  education: [
+
+    {
+      school:
+        "Universiti Kebangsaan Malaysia (UKM)",
+
+      degree:
+        "Master of Artificial Intelligence (Expected Nov 2026)",
+
+      period:
+        "2025.03 - 2026.11",
+
+      bullets: [
+        "Research focus: AI-driven business process automation using natural language understanding, exploring methods to transform user requirements into structured and executable workflows.",
+
+        "Key coursework: Machine Learning, Advanced AI Algorithms, Natural Language Processing (NLP), and Data Mining."
+      ]
+    },
+
+
+    {
+      school:
+        "Guangzhou College of Software",
+
+      degree:
+        "Bachelor of Software Engineering",
+
+      period:
+        "2014.08 - 2018.06",
+
+      bullets: [
+        "Awards: Outstanding Graduate, National Individual Scholarship, Guangdong Outstanding Communist Youth League Member.",
+
+        "Achievements: National Second Prize in Discovery Cup Software Design Competition, National Third Prize in Computer Design Competition, and Second Prize in Lanqiao Cup Programming Competition."
+      ]
+    }
+
   ]
 };
