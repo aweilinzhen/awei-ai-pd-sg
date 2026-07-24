@@ -1,0 +1,477 @@
+:root {
+  color-scheme: light;
+
+  --paper-width: 210mm;
+
+  --paper-bg: #ffffff;
+  --canvas-bg: #ededed;
+
+  --text: #151515;
+  --muted: #3f3f3f;
+  --line: #262626;
+}
+
+/* =========================
+   基础
+========================= */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+}
+
+body {
+  background: var(--canvas-bg);
+  color: var(--text);
+
+  font-family:
+    "PingFang SC",
+    "Microsoft YaHei",
+    "Noto Sans CJK SC",
+    Arial,
+    sans-serif;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* =========================
+   PC：连续长页
+========================= */
+
+.resume {
+  width: min(
+    var(--paper-width),
+    calc(100vw - 32px)
+  );
+
+  margin: 24px auto 40px;
+  padding: 0;
+
+  background: var(--paper-bg);
+
+  box-shadow:
+    0 4px 22px
+    rgb(0 0 0 / 14%);
+}
+
+.resume-page {
+  width: 100%;
+  height: auto;
+  min-height: 0;
+
+  padding:
+    14mm
+    15mm
+    12mm;
+
+  overflow: visible;
+
+  background: var(--paper-bg);
+}
+
+/*
+  PC 端视觉上合并成一张长页。
+*/
+
+.page-one {
+  padding-bottom: 0;
+}
+
+.page-two {
+  padding-top: 3.2mm;
+}
+
+/* =========================
+   顶部个人信息
+========================= */
+
+.profile-header {
+  min-height: 31mm;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  gap: 18px;
+
+  margin-bottom: 1.5mm;
+}
+
+.profile-main {
+  min-width: 0;
+
+  padding-top: 0.5mm;
+}
+
+.profile-main h1 {
+  margin: 0 0 1.6mm;
+
+  font-size: 24px;
+  line-height: 1.1;
+
+  font-weight: 700;
+
+  letter-spacing: 0.01em;
+}
+
+/* =========================
+   联系方式 / 状态
+========================= */
+
+.contact-line,
+.status-line {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+
+  margin: 0;
+
+  font-size: 11.4px;
+  line-height: 1.55;
+
+  color: #222;
+}
+
+/*
+  从第二个字段开始添加分隔符。
+*/
+
+.contact-line span + span::before,
+.status-line span + span::before {
+  content: " 丨 ";
+  color: #555;
+}
+
+/* =========================
+   头像
+========================= */
+
+.profile-photo {
+  width: 22mm;
+  height: 28mm;
+
+  object-fit: cover;
+  object-position: center 20%;
+
+  flex: 0 0 auto;
+}
+
+/* =========================
+   模块
+========================= */
+
+.resume-section + .resume-section {
+  margin-top: 4.5mm;
+}
+
+.section-title {
+  margin: 0 0 2.6mm;
+
+  padding: 0 0 1.4mm;
+
+  border-bottom:
+    1.6px solid
+    var(--line);
+
+  font-size: 20px;
+  line-height: 1.05;
+
+  font-weight: 700;
+}
+
+/* =========================
+   列表
+========================= */
+
+.bullet-list {
+  margin: 0;
+
+  padding-left: 5.3mm;
+
+  font-size: 11.3px;
+  line-height: 1.55;
+}
+
+.bullet-list li {
+  margin: 0 0 1.35mm;
+
+  padding-left: 0.5mm;
+}
+
+.bullet-list li:last-child {
+  margin-bottom: 0;
+}
+
+/* =========================
+   工作 / 项目 / 教育经历
+========================= */
+
+.entry {
+  margin: 0 0 3.2mm;
+}
+
+.entry:last-child {
+  margin-bottom: 0;
+}
+
+.entry-heading {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    auto;
+
+  align-items: baseline;
+
+  gap: 10mm;
+
+  margin-bottom: 0.7mm;
+}
+
+.entry-heading h3 {
+  margin: 0;
+
+  font-size: 14.5px;
+  line-height: 1.35;
+
+  font-weight: 700;
+}
+
+.entry-heading time {
+  white-space: nowrap;
+
+  font-size: 11.2px;
+  line-height: 1.35;
+
+  color: var(--muted);
+}
+
+.entry-subtitle {
+  margin: 0 0 1.1mm;
+
+  font-size: 11.2px;
+  line-height: 1.45;
+
+  color: #333;
+}
+
+.entry .bullet-list {
+  font-size: 11.15px;
+  line-height: 1.5;
+}
+
+.entry .bullet-list li {
+  margin-bottom: 0.9mm;
+}
+
+.entry .bullet-list li:last-child {
+  margin-bottom: 0;
+}
+
+/* =========================================================
+   PC 操作按钮
+========================================================= */
+
+.page-actions {
+  position: fixed;
+
+  top: 20px;
+  right: 24px;
+
+  z-index: 30;
+
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+}
+
+.action-button {
+  height: 42px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0 18px;
+
+  border-radius: 9px;
+
+  font:
+    600
+    14px / 1
+    "PingFang SC",
+    "Microsoft YaHei",
+    Arial,
+    sans-serif;
+
+  text-decoration: none;
+
+  cursor: pointer;
+  user-select: none;
+
+  transition:
+    background-color 0.15s ease,
+    border-color 0.15s ease,
+    color 0.15s ease,
+    transform 0.15s ease;
+}
+
+
+/* 打印 */
+
+.print-button {
+  border: 1px solid #111111;
+
+  background: #111111;
+  color: #ffffff;
+
+  box-shadow:
+    0 6px 18px
+    rgb(0 0 0 / 18%);
+}
+
+.print-button:hover {
+  background: #2b2b2b;
+  border-color: #2b2b2b;
+}
+
+.print-button:disabled {
+  opacity: 0.65;
+  cursor: wait;
+}
+
+.action-button:active {
+  transform: translateY(1px);
+}
+
+/* =========================
+   手机端
+========================= */
+
+@media screen and (max-width: 720px) {
+
+  .resume {
+    width: calc(100vw - 16px);
+
+    margin: 12px auto 24px;
+
+    box-shadow:
+      0 2px 14px
+      rgb(0 0 0 / 12%);
+  }
+
+  .resume-page {
+    padding:
+      7vw
+      6.2vw;
+  }
+
+  .page-one {
+    padding-bottom: 0;
+  }
+
+  .page-two {
+    padding-top: 3.2vw;
+  }
+
+  .page-actions {
+    display: none;
+  }
+
+  .profile-header {
+    min-height: 0;
+  }
+
+  .profile-photo {
+    width: 18vw;
+    height: 23vw;
+
+    max-width: 82px;
+    max-height: 105px;
+  }
+
+  .profile-main h1 {
+    font-size:
+      clamp(
+        20px,
+        5.5vw,
+        24px
+      );
+  }
+
+  .section-title {
+    font-size:
+      clamp(
+        17px,
+        4.7vw,
+        20px
+      );
+  }
+
+  .entry-heading {
+    gap: 8px;
+  }
+
+  .entry-heading h3 {
+    font-size:
+      clamp(
+        12px,
+        3.5vw,
+        14.5px
+      );
+  }
+
+  .entry-heading time,
+  .entry-subtitle,
+  .bullet-list,
+  .entry .bullet-list,
+  .contact-line,
+  .status-line {
+    font-size:
+      clamp(
+        9px,
+        2.65vw,
+        11.3px
+      );
+  }
+}
+
+/*
+  不再使用当前页面本身的 @media print 去承担打印。
+
+  app.js 会创建一个完全独立的打印 iframe，
+  里面有专用 A4 CSS。
+
+  这样可以避开 Chrome 当前页打印时
+  “只有横线、圆点、头像，正文为空白”的渲染异常。
+*/
+
+@media print {
+  .page-actions {
+    display: none !important;
+  }
+}
+
+
+/* =========================================================
+   PC 连续长页：隐藏“工作经历（续）”标题
+========================================================= */
+
+@media screen {
+  .screen-only-hidden-title {
+    display: none;
+  }
+
+  .continuation-section {
+    margin-top: 0 !important;
+  }
+}
