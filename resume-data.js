@@ -58,13 +58,13 @@ window.RESUME_DATA = {
 
 
     {
-      company: "WonderMath",
+      company: "Wonderclass (WanDou SiWei)",
 
       period:
         "2021.03 - 2021.08",
 
       subtitle:
-        "Series C online education company | Technical Platform Product Manager.",
+        "Series C EdTech Company | Technical Platform Product Manager.",
 
       bullets: [
         "Designed internal monitoring platform products for the engineering organization by analyzing monitoring requirements across multiple business lines and establishing unified platform capabilities.",
@@ -75,7 +75,7 @@ window.RESUME_DATA = {
 
 
     {
-      company: "Deep Data",
+      company: "Deepexi Technology (HKEX: 01384)",
 
       period:
         "2019.08 - 2021.03",
@@ -92,13 +92,13 @@ window.RESUME_DATA = {
 
 
     {
-      company: "Daoyiyun",
+      company: "Do1 (Daoyiyun)",
 
       period:
         "2018.07 - 2019.08",
 
       subtitle:
-        "Enterprise collaboration and low-code platform provider | Product Manager.",
+        "Enterprise SaaS & Low-code Platform Provider | Product Manager.",
 
       bullets: [
         "Designed core capabilities for low-code and BPM platforms, including form builders, workflow engines, and configurable business modules to support enterprise application development.",
