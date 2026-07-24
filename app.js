@@ -2,21 +2,21 @@
   "use strict";
 
   /* =========================================================
-     读取简历数据
+     Load Resume Data
   ========================================================= */
 
   const data = window.RESUME_DATA;
 
   if (!data) {
     console.error(
-      "未找到 window.RESUME_DATA，请检查 resume-data.js 是否正确加载。"
+      "window.RESUME_DATA not found. Please check whether resume-data.js is loaded correctly."
     );
     return;
   }
 
 
   /* =========================================================
-     HTML 转义
+     HTML Escaping
   ========================================================= */
 
   const esc = (value) =>
@@ -29,7 +29,7 @@
 
 
   /* =========================================================
-     列表
+     Bullet List
   ========================================================= */
 
   const bulletList = (items = []) => `
@@ -47,7 +47,7 @@
 
 
   /* =========================================================
-     通用经历条目
+     Common Entry Component
   ========================================================= */
 
   const entry = (
@@ -94,7 +94,7 @@
 
 
   /* =========================================================
-     通用模块
+     Common Section Component
   ========================================================= */
 
   const section = (
@@ -115,7 +115,7 @@
 
 
   /* =========================================================
-     AI 项目经历
+     AI Project Experience
   ========================================================= */
 
   const aiProjectHtml = entry(
@@ -137,21 +137,20 @@
 
 
   /* =========================================================
-     工作经历分页
+     Professional Experience Pagination
 
-     第 1 页：
-     - 个人总结
-     - AI 项目经历
-     - 有信云
-     - 豌豆思维
+     Page 1:
+     - Professional Summary
+     - AI Project Experience
+     - First three companies
 
-     第 2 页：
-     - 滴普科技
-     - 道一云
-     - 项目经历
-     - 教育经历
+     Page 2:
+     - Remaining companies
+     - Selected Projects
+     - Education
 
-     PC 页面视觉上仍然是一张连续长页。
+     On desktop, both pages are visually displayed
+     as one continuous resume.
   ========================================================= */
 
   const firstPageExperienceHtml =
@@ -210,7 +209,7 @@
 
 
   /* =========================================================
-     项目经历
+     Selected Projects
   ========================================================= */
 
   const projectsHtml =
@@ -238,7 +237,7 @@
 
 
   /* =========================================================
-     教育经历
+     Education
   ========================================================= */
 
   const educationHtml =
@@ -248,7 +247,7 @@
           entry(
             {
               title:
-                `${item.school} ｜ ${item.degree}`,
+                `${item.school} | ${item.degree}`,
 
               period:
                 item.period,
@@ -266,7 +265,7 @@
 
 
   /* =========================================================
-     获取页面容器
+     Get Resume Container
   ========================================================= */
 
   const resume =
@@ -276,28 +275,28 @@
 
   if (!resume) {
     console.error(
-      "未找到 #resume 容器。"
+      "#resume container not found."
     );
     return;
   }
 
 
   /* =========================================================
-     渲染简历
+     Render Resume
   ========================================================= */
 
   resume.innerHTML = `
 
     <!-- =====================================================
-         第 1 页
+         Page 1
     ====================================================== -->
 
     <section
       class="resume-page page-one"
-      aria-label="简历第1页"
+      aria-label="Resume Page 1"
     >
 
-      <!-- 顶部个人信息 -->
+      <!-- Profile Information -->
 
       <header class="profile-header">
 
@@ -312,7 +311,7 @@
           </h1>
 
 
-          <!-- 联系方式 -->
+          <!-- Contact Information -->
 
           <p class="contact-line">
 
@@ -349,7 +348,7 @@
           </p>
 
 
-          <!-- 求职方向 -->
+          <!-- Target Role -->
 
           <p class="status-line">
 
@@ -366,7 +365,7 @@
         </div>
 
 
-        <!-- 头像 -->
+        <!-- Profile Photo -->
 
         <img
           class="profile-photo"
@@ -375,17 +374,17 @@
               data.profile.avatar
             )
           }"
-          alt="个人证件照"
+          alt="Profile Photo"
         />
 
       </header>
 
 
-      <!-- 个人总结 -->
+      <!-- Professional Summary -->
 
       ${
         section(
-          "个人总结",
+          "Professional Summary",
 
           bulletList(
             data.summary
@@ -394,11 +393,11 @@
       }
 
 
-      <!-- AI 项目经历 -->
+      <!-- AI Project Experience -->
 
       ${
         section(
-          "AI 项目经历",
+          "AI Project Experience",
 
           aiProjectHtml,
 
@@ -407,11 +406,11 @@
       }
 
 
-      <!-- 工作经历：前两家公司 -->
+      <!-- Professional Experience -->
 
       ${
         section(
-          "工作经历",
+          "Professional Experience",
 
           firstPageExperienceHtml
         )
@@ -421,19 +420,19 @@
 
 
     <!-- =====================================================
-         第 2 页
+         Page 2
     ====================================================== -->
 
     <section
       class="resume-page page-two"
-      aria-label="简历第2页"
+      aria-label="Resume Page 2"
     >
 
-      <!-- 工作经历：后两家公司 -->
+      <!-- Continued Professional Experience -->
 
       ${
         section(
-          "工作经历（续）",
+          "Professional Experience (Continued)",
 
           secondPageExperienceHtml,
 
@@ -442,22 +441,22 @@
       }
 
 
-      <!-- 项目经历 -->
+      <!-- Selected Projects -->
 
       ${
         section(
-          "代表项目",
+          "Selected Projects",
 
           projectsHtml
         )
       }
 
 
-      <!-- 教育经历 -->
+      <!-- Education -->
 
       ${
         section(
-          "教育经历",
+          "Education",
 
           educationHtml
         )
@@ -469,22 +468,23 @@
 
 
   /* =========================================================
-     PC 连续长页模式
+     Desktop Continuous Page Mode
 
-     PC 浏览时隐藏：
-     “工作经历（续）”
+     Hide the "Professional Experience (Continued)"
+     heading when viewing the resume on screen.
 
-     这样页面看起来仍然是：
+     This keeps the desktop page visually continuous:
 
-     工作经历
-     有信云
-     豌豆思维
-     滴普科技
-     道一云
+     Professional Experience
+     Company 1
+     Company 2
+     Company 3
+     Company 4
 
-     而不是两个工作经历模块。
+     rather than displaying two separate
+     Professional Experience sections.
 
-     打印时 print.js / print.css 会恢复标题。
+     The print page can restore the heading if required.
   ========================================================= */
 
   const continuationTitle =
@@ -500,30 +500,34 @@
 
 
   /* =========================================================
-     打印功能
+     Print Function
 
-     稳定链路：
+     Stable print flow:
 
-     点击按钮
+     Click Print
      ↓
-     将当前已经渲染好的 #resume 克隆并写入 localStorage
+     Clone the rendered #resume
      ↓
-     打开 print.html?token=...
+     Save the snapshot to localStorage
      ↓
-     print.js 根据 token 读取打印快照
+     Open print.html?token=...
      ↓
-     print.html 将两页 DOM 渲染成高清 Canvas 图片
+     print.js reads the snapshot by token
      ↓
-     Chrome / Safari 只打印两张 A4 图片
+     Render two resume pages as high-resolution canvases
+     ↓
+     Chrome / Safari prints two A4 images
      ↓
      window.print()
 
-     为什么不只依赖 window.opener：
-     - 某些浏览器/安全策略会隔离 opener
-     - 打印页刷新后 opener 可能不可用
-     - localStorage 同源共享，更稳定
+     Why localStorage is used instead of relying only
+     on window.opener:
 
-     print.js 仍保留 opener 作为兜底。
+     - Some browsers or security policies may isolate opener
+     - opener may become unavailable after refreshing print.html
+     - localStorage is shared within the same origin
+
+     print.js can still use opener as a fallback.
   ========================================================= */
 
   const printButton =
@@ -533,7 +537,7 @@
 
   if (!printButton) {
     console.warn(
-      "未找到 #printButton，打印按钮无法绑定。"
+      "#printButton not found. The print function cannot be initialized."
     );
     return;
   }
@@ -541,139 +545,242 @@
   const PRINT_STORAGE_PREFIX =
     "resume-print-snapshot:";
 
+
+  /* =========================================================
+     Create Print Snapshot
+  ========================================================= */
+
   const createPrintSnapshot = () => {
     const clonedResume =
       resume.cloneNode(true);
 
     /*
-      把图片地址转换为绝对地址。
-      即使以后 print.html 移动目录，头像也不会因为相对路径失效。
+      Convert image paths to absolute URLs.
+
+      This ensures that the profile photo can still load
+      correctly even if print.html is moved to another folder
+      in the future.
     */
+
     clonedResume
       .querySelectorAll("img[src]")
       .forEach((image) => {
         try {
+
           image.src = new URL(
             image.getAttribute("src"),
             window.location.href
           ).href;
+
         } catch (error) {
+
           console.warn(
-            "图片地址转换失败：",
+            "Failed to convert image URL:",
             image.getAttribute("src"),
             error
           );
+
         }
       });
 
     return clonedResume.innerHTML;
   };
 
+
+  /* =========================================================
+     Print Button Event
+  ========================================================= */
+
   printButton.addEventListener(
     "click",
     () => {
+
       if (printButton.disabled) {
         return;
       }
 
+
       printButton.disabled = true;
+
+
+      /* -------------------------------------------------------
+         Generate unique print token
+      ------------------------------------------------------- */
 
       const token = [
         Date.now().toString(36),
+
         Math.random()
           .toString(36)
           .slice(2, 10)
+
       ].join("-");
+
 
       const storageKey =
         `${PRINT_STORAGE_PREFIX}${token}`;
 
+
+      /* -------------------------------------------------------
+         Build print snapshot payload
+      ------------------------------------------------------- */
+
       const payload = {
-        html: createPrintSnapshot(),
-        title: document.title,
-        createdAt: Date.now()
+
+        html:
+          createPrintSnapshot(),
+
+        title:
+          document.title,
+
+        createdAt:
+          Date.now()
+
       };
+
 
       let snapshotStored = false;
 
+
+      /* -------------------------------------------------------
+         Store print snapshot
+      ------------------------------------------------------- */
+
       try {
+
         localStorage.setItem(
           storageKey,
           JSON.stringify(payload)
         );
+
         snapshotStored = true;
+
       } catch (error) {
+
         /*
-          本地存储不可用时不直接失败。
-          print.js 仍会尝试通过同源 window.opener 读取当前简历。
+          If localStorage is unavailable,
+          do not stop the print process.
+
+          print.js can still attempt to read the resume
+          through same-origin window.opener.
         */
+
         console.warn(
-          "无法写入打印快照，将使用 opener 兜底：",
+          "Unable to save the print snapshot. The opener fallback will be used:",
           error
         );
+
       }
 
-      /*
-        必须仍然在用户 click 事件的同步调用链里执行 window.open，
-        避免被浏览器当作广告弹窗拦截。
-      */
+
+      /* -------------------------------------------------------
+         Open print page
+
+         window.open must remain inside the synchronous
+         user click event chain to avoid being blocked
+         as an unsolicited pop-up.
+      ------------------------------------------------------- */
+
       const printWindow =
         window.open(
+
           `print.html?token=${encodeURIComponent(token)}&v=${Date.now()}`,
+
           "_blank"
+
         );
 
+
+      /* -------------------------------------------------------
+         Handle blocked pop-up
+      ------------------------------------------------------- */
+
       if (!printWindow) {
+
         if (snapshotStored) {
+
           localStorage.removeItem(
             storageKey
           );
+
         }
+
 
         printButton.disabled = false;
 
+
         alert(
-          "浏览器阻止了打印窗口。\n\n" +
-          "请允许当前网站打开弹出窗口，然后重新点击“打印 / 保存 PDF”。"
+          "The browser blocked the print window.\n\n" +
+          "Please allow pop-ups for this website, then click \"Print / Save PDF\" again."
         );
+
+
         return;
       }
 
+
+      /* -------------------------------------------------------
+         Focus print window
+      ------------------------------------------------------- */
+
       try {
+
         printWindow.focus();
+
       } catch (error) {
+
         console.warn(
-          "无法自动聚焦打印窗口：",
+          "Unable to focus the print window:",
           error
         );
+
       }
 
-      /*
-        正常情况下 print.js 读取后会立即删除。
-        这里再做一次延迟清理，防止用户在打印页加载前就关闭窗口，
-        导致临时简历快照残留在 localStorage。
-      */
+
+      /* -------------------------------------------------------
+         Delayed snapshot cleanup
+
+         Normally print.js deletes the snapshot immediately
+         after reading it.
+
+         This delayed cleanup prevents temporary print data
+         from remaining in localStorage if the user closes
+         the print page before it finishes loading.
+      ------------------------------------------------------- */
+
       if (snapshotStored) {
+
         window.setTimeout(
           () => {
+
             localStorage.removeItem(
               storageKey
             );
+
           },
           60 * 1000
         );
+
       }
 
-      /*
-        只做短暂防抖，不等待打印页完成。
-        打印页会自行读取并删除快照。
-      */
+
+      /* -------------------------------------------------------
+         Re-enable print button after a short debounce.
+
+         The main page does not need to wait for the print page
+         to complete because print.html handles printing
+         independently.
+      ------------------------------------------------------- */
+
       window.setTimeout(
         () => {
+
           printButton.disabled = false;
+
         },
         800
       );
+
     }
   );
 
