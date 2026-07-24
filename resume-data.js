@@ -11,9 +11,9 @@ window.RESUME_DATA = {
   summary: [
     "AI Product Manager with a software engineering background and 6 years of experience in B2B SaaS/PaaS product management. Experienced in translating complex business requirements into scalable product solutions and driving AI-powered product delivery.",
 
-    "Strong understanding of AI technologies including Machine Learning, Natural Language Processing (NLP), advanced algorithms, and data mining. Currently pursuing a Master’s degree in Artificial Intelligence, focusing on natural language-driven business process automation and LLM applications.",
+    "Hands-on understanding of AI technologies including LLM applications, NLP, machine learning, and AI workflow automation. Currently pursuing a Master’s degree in Artificial Intelligence, focusing on natural language-driven business process automation and LLM applications.",
 
-    "Experienced in enterprise platform design, workflow automation, data modeling, API integration, and permission systems. Previously contributed to low-code/PaaS platform development and delivered solutions for enterprise clients including P&G and Zhongxiaoyun."
+    "Experienced in enterprise SaaS/PaaS platforms, workflow automation, API orchestration, and AI-powered business process solutions. Previously contributed to low-code/PaaS platform development and delivered solutions for enterprise clients including P&G and Zhongxiaoyun."
   ],
 
 
@@ -25,11 +25,11 @@ window.RESUME_DATA = {
       "Designed an LLM-powered workflow automation solution that enables business users to generate executable workflows through natural language descriptions.",
 
     bullets: [
-      "Designed the AI product architecture by building the pipeline of Natural Language Input → LLM Understanding → Workflow Generation → BPMN Execution, enabling automated business process creation.",
+      "Designed an AI-powered workflow automation product that enables business users to convert natural language requirements into executable business processes.",
 
       "Designed Workflow IR (Intermediate Representation) as a structured layer between LLM output and workflow execution, defining task nodes, conditional branches, and process relationships.",
 
-      "Improved LLM generation reliability through Prompt Engineering, structured output design, and rule-based validation to enhance accuracy, consistency, and controllability.",
+      "Improved LLM output reliability through prompt engineering, structured JSON generation, and rule-based validation to reduce hallucination and improve workflow consistency.",
 
       "Created 24 enterprise workflow test scenarios covering sequential processes, conditional branches, and parallel execution. Achieved 100% success rate in workflow generation, deployment, and execution validation."
     ]
@@ -48,7 +48,7 @@ window.RESUME_DATA = {
         "Enterprise PaaS and low-code platform provider | PaaS Product Manager.",
 
       bullets: [
-        "Participated in the 0-1 development of an enterprise low-code/PaaS platform, responsible for core platform capabilities including workflow, approval processes, and underlying product architecture. Supported continuous product iteration and commercialization.",
+        "Led product design for core PaaS capabilities including workflow engine, approval process, and platform architecture.",
 
         "Managed the complete product lifecycle from requirement analysis, solution design, technical alignment, development delivery, and cross-functional coordination. Mentored two assistant product managers in product analysis and project execution.",
 
@@ -157,7 +157,7 @@ window.RESUME_DATA = {
         "Universiti Kebangsaan Malaysia (UKM)",
 
       degree:
-        "Master of Artificial Intelligence (Expected Nov 2026)",
+        "Master of Artificial Intelligence (Expected Graduation: Nov 2026)",
 
       period:
         "2025.03 - 2026.11",
