@@ -58,7 +58,7 @@ window.RESUME_DATA = {
 
 
     {
-      company: "WonderMath (豌豆思维)",
+      company: "WonderMath",
 
       period:
         "2021.03 - 2021.08",
@@ -75,7 +75,7 @@ window.RESUME_DATA = {
 
 
     {
-      company: "Deep Data (滴普科技)",
+      company: "Deep Data",
 
       period:
         "2019.08 - 2021.03",
