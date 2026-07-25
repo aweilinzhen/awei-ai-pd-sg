@@ -181,7 +181,7 @@ window.RESUME_DATA = {
         "2014.08 - 2018.06",
 
       bullets: [
-        "Awards: Outstanding Graduate, National Individual Scholarship, Guangdong Outstanding Communist Youth League Member.",
+        "Awards: Outstanding Graduate, National Individual Scholarship Recipient, and Multiple College Scholarships.",
 
         "Achievements: National Second Prize in Discovery Cup Software Design Competition, National Third Prize in Computer Design Competition, and Second Prize in Lanqiao Cup Programming Competition."
       ]
