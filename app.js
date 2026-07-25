@@ -364,19 +364,6 @@
 
         </div>
 
-
-        <!-- Profile Photo -->
-
-        <img
-          class="profile-photo"
-          src="${
-            esc(
-              data.profile.avatar
-            )
-          }"
-          alt="Profile Photo"
-        />
-
       </header>
 
 
