@@ -4,8 +4,7 @@ window.RESUME_DATA = {
     location: "Guangdong, China",
     phone: "+86 156-2613-0517",
     email: "aweilinzhen@gmail.com",
-    targetRole: "AI Product Manager | Open to Singapore Opportunities",
-    avatar: "assets/profile.png"
+    targetRole: "AI Product Manager | Open to Singapore Opportunities"
   },
 
   summary: [
